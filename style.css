@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+html{
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > p{
+    margin-top: 0;
+    margin-bottom: 1.875em;
+}
+
+header > h1{
+    font-size: 1.25rem;
+}
+
+.dot{
+   color: hsl(223, 87%, 63%);
+}
+
+h2{
+    font-weight: normal;
+    color: hsl(0, 0%, 50%);
+}
+
+.soon{
+    color: black;
+    font-weight: bold;
+}
+
+.pingform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email{
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 35px;
+    border: 1px solid hsl(223, 100%, 88%);
+    padding: .625rem;
+    width: 85%;
+    min-width: 30ch;
+    outline: none;
+}
+
+.email::placeholder{
+    color: hsl(0, 0%, 59%);
+    opacity: 0.4;
+}
+
+.message{
+    display: none;
+}
+
+.error{
+    display: block;
+    color: hsl(354, 100%, 66%);
+    margin: 0 0 .625em 0;
+    padding: .6em;
+    font-size: .8rem;
+}
+
+.submit{
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 35px;
+    color: white;
+    background-color: hsl(223, 87%, 63%);
+    width: 100%;
+    border: none;
+    padding: .625rem 2rem;
+    margin: .625rem;
+}
+
+.submit:hover{
+    background-color: hsl(223, 100%, 88%);
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin: 3.125em 0;
+}
+
+img{
+    width: 80%;
+    
+}
+
+.copyright{
+    margin: auto;
+    padding: .3125em;
+    text-align: center;
+}
+
+.icons{
+    margin: 1.875em 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright > .icons > a{
+    color: hsl(223, 87%, 63%);
+    background-color: white;
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 50% ;
+    padding: 1em;
+    font-size: .9rem;
+    margin: 0 .3125em;
+}
+
+.copyright > .icons > a:hover{
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    cursor: pointer;
+}
+
+.copytext{
+    color: hsl(0, 0%, 59%);
+}
+
+@media (min-width: 50em){
+    .pingform{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .email{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .submit{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .error{
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 0 0 2em 2em;
+    }
+
+}
